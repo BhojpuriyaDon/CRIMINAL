@@ -1,0 +1,106 @@
+CRIMINAL Freeware License and End-User License Agreement
+Version 1.0
+
+Publisher: BhojpuriyaDon
+Copyright (c) 2026 BhojpuriyaDon. All rights reserved, except as expressly
+granted below and under applicable third-party licenses.
+Project: https://github.com/BhojpuriyaDon/CRIMINAL
+
+1. Scope
+
+This agreement covers the original CRIMINAL application distributed by the
+Publisher as a Windows installer or portable executable, and its accompanying
+original documentation. Third-party software is governed by Section 7.
+By installing or using CRIMINAL, you agree to these terms. If you do not agree,
+do not install or use it. This agreement does not override mandatory legal rights.
+
+2. Free use
+
+The Publisher grants you a worldwide, non-exclusive, royalty-free license to
+install and use this version of CRIMINAL on computers you own or are authorized
+to use, for personal, educational, nonprofit and commercial purposes. No CRIMINAL
+license fee or subscription is required. You may make backup copies.
+
+This license continues while you comply with its terms. A later pricing or
+license change does not remove the permissions granted for this version.
+No promise of future updates, support or online service availability is made.
+
+3. Third-party costs and services
+
+AI models, API credits, web search, voice, image services, cloud compute and
+other external services are not included. You are responsible for any accounts,
+charges and service terms associated with providers you configure. Local models
+also remain subject to their own licenses and system requirements.
+
+4. Sharing copies
+
+You may redistribute the Publisher's complete, unmodified installer or portable
+package without charging for the application, provided you retain this agreement,
+all accompanying third-party licenses and notices, and identify the Publisher
+and official project URL. Do not present a redistributed copy as your own product
+or as an endorsement by the Publisher. Sharing the official download link is
+preferred. Separate services you provide must not be represented as a CRIMINAL
+license fee or as support supplied by the Publisher.
+
+5. Reserved rights
+
+CRIMINAL's original application code is proprietary; this agreement does not
+grant an open-source license or a right to obtain its source code. Except as
+expressly permitted here, by a third-party license or by applicable law, you may
+not modify, sell, sublicense or distribute modified versions of that original
+application code, or remove its ownership and license notices.
+
+This restriction does not prohibit ordinary app configuration, custom skills,
+plugins, integrations, or creating and modifying your own project files. It does
+not restrict reverse engineering or other activities to the extent they are
+permitted by mandatory law or an applicable third-party license. No trademark
+rights are granted beyond identifying the application and its origin.
+
+6. Your work and use of the app
+
+The Publisher claims no ownership of your prompts, project files or generated
+outputs merely because you use CRIMINAL. Rights in those materials may depend
+on applicable law, third-party content and your AI provider's terms.
+
+Use CRIMINAL only with systems, files and accounts you are authorized to access.
+It can run commands, change files and interact with other applications using
+the permissions you give it. Review important outputs and keep appropriate
+backups. Model output and automated verification can be incorrect or incomplete.
+
+Prompts, relevant files, tool results and images may be sent to the AI provider
+and integrations you select. Cloud work sends the context required by the chosen
+worker. This agreement does not replace those providers' privacy policies.
+
+7. Third-party software
+
+CRIMINAL includes separately licensed software, fonts and other components.
+Their copyright notices and licenses remain in force. This agreement does not
+replace, narrow or impose additional restrictions on the rights those licenses
+grant, including rights to use, modify, redistribute or obtain covered source.
+If these terms conflict with a component's license, that component's license
+controls for that component. Consult the third-party notices distributed with
+the application for the applicable terms and source-availability information.
+
+8. Warranty and liability
+
+To the maximum extent permitted by applicable law, CRIMINAL is provided "AS IS"
+and "AS AVAILABLE", without warranties of any kind, express or implied, including
+merchantability, fitness for a particular purpose and non-infringement. The
+Publisher does not guarantee uninterrupted operation, secure or error-free
+outputs, or compatibility with every model, provider or computer.
+
+To the maximum extent permitted by applicable law, the Publisher is not liable
+for indirect, incidental, special or consequential damages, or loss of data,
+profits or business, arising from use of or inability to use CRIMINAL. Nothing
+in this agreement excludes liability or consumer rights that cannot lawfully
+be excluded or limited.
+
+9. Ending use and questions
+
+You may end your use at any time by uninstalling CRIMINAL and removing its copies.
+Keep your own project files and outputs as needed. If you materially violate
+this agreement, the permissions granted for the original CRIMINAL application
+end. Rights independently granted by third-party licenses are unaffected.
+
+For licensing questions, contact the Publisher through the official project:
+https://github.com/BhojpuriyaDon/CRIMINAL/issues
