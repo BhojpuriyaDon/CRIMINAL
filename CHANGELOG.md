@@ -1,5 +1,18 @@
 # Release notes
 
+## 0.14.6 — Recovery, document checks and delivery fixes
+
+- Recognizes narrowly verified recovery of corrected local JavaScript artifact-generation failures across document, spreadsheet, image, data and code tasks. Unchanged assertions and current file evidence are required; unrelated successful checks do not clear failures.
+- Improves recognition of meaningful Node and saved PowerShell verification scripts, and recovery of read-only process/window probes.
+- Checks Office/PDF content with extracted text and supports exact slide, sheet and page counts. Office owner-lock metadata no longer invalidates file checks; malformed PDF shells are rejected.
+- Streams presence and hash checks for large output files without claiming their content or playback has been verified.
+- Final summaries include actual script-created deliverables from the current request, filter helper/render-cache files, and summarize unresolved errors in clearer language.
+- Restores eligible document, image and media files under artifacts/ to preview discovery.
+- Retries malformed visual-review JSON once with the same images and remaining budget. Repeated malformed responses remain inconclusive.
+- Updates bundled document, presentation, spreadsheet and PDF workflow guidance.
+
+Validation: 507 automated tests, 8 packaged desktop suites, portable launch checks and 237 installer payload file comparisons passed. Provider fixtures were controlled; live provider behavior and a clean-VM installer run were not tested. Windows packages remain unsigned.
+
 ## 0.14.5 — Conversation, visual review and delivery fixes
 
 - Visual review streams all targets in two-image batches, removing the old 12-target and 60-image task cutoffs while preserving budget, cancellation and coverage checks.
