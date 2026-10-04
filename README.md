@@ -2,7 +2,7 @@
 
 **A free AI workspace for Windows. Bring your models and work in your own project folders.**
 
-Published by **BhojpuriyaDon** · **v0.19.0** · Windows x64 · Installer and portable editions
+Published by **BhojpuriyaDon** · **v0.21.0** · Windows x64 · Installer and portable editions
 
 [Releases](https://github.com/BhojpuriyaDon/CRIMINAL/releases) · [Report an issue](https://github.com/BhojpuriyaDon/CRIMINAL/issues) · [License](LICENSE.txt)
 
@@ -27,16 +27,16 @@ This repository hosts downloads, documentation and issue reports. CRIMINAL's app
 
 ## Download
 
-**Latest release: [CRIMINAL 0.19.0](https://github.com/BhojpuriyaDon/CRIMINAL/releases/tag/v0.19.0)**
+**Latest release: [CRIMINAL 0.21.0](https://github.com/BhojpuriyaDon/CRIMINAL/releases/tag/v0.21.0)**
 
 Choose an edition:
 
 | Edition | What to download |
 | --- | --- |
-| Installer | [Download Windows installer](https://github.com/BhojpuriyaDon/CRIMINAL/releases/download/v0.19.0/CRIMINAL-Setup-0.19.0.exe) — installs the app and creates shortcuts. |
-| Portable | [Download portable app](https://github.com/BhojpuriyaDon/CRIMINAL/releases/download/v0.19.0/CRIMINAL-0.19.0-portable.exe) — opens without installation. |
-| Checksums | [SHA256SUMS.txt](https://github.com/BhojpuriyaDon/CRIMINAL/releases/download/v0.19.0/SHA256SUMS.txt) |
-| Third-party licenses | [Legal and covered-source bundle](https://github.com/BhojpuriyaDon/CRIMINAL/releases/download/v0.19.0/CRIMINAL-0.19.0-third-party-legal.zip) |
+| Installer | [Download Windows installer](https://github.com/BhojpuriyaDon/CRIMINAL/releases/download/v0.21.0/CRIMINAL-Setup-0.21.0.exe) — installs the app and creates shortcuts. |
+| Portable | [Download portable app](https://github.com/BhojpuriyaDon/CRIMINAL/releases/download/v0.21.0/CRIMINAL-0.21.0-portable.exe) — opens without installation. |
+| Checksums | [SHA256SUMS.txt](https://github.com/BhojpuriyaDon/CRIMINAL/releases/download/v0.21.0/SHA256SUMS.txt) |
+| Third-party licenses | [Legal and covered-source bundle](https://github.com/BhojpuriyaDon/CRIMINAL/releases/download/v0.21.0/CRIMINAL-0.21.0-third-party-legal.zip) |
 
 GitHub's automatically generated "Source code" ZIP/TAR downloads contain this documentation repository, not the application.
 
@@ -63,15 +63,19 @@ Add create, edit and delete actions, test them, and summarize the changes.
 
 English, Hindi and Hinglish prompts are supported. Results depend on the selected model and its capabilities.
 
-## What's new in 0.19.0
+## What's new in 0.21.0
 
-- **Approved authenticated requests:** save exact GET/POST templates for test accounts in the credential vault; replay them within an expiring scope policy and request budget.
-- **Source and dependency review:** managed Opengrep and OSV-Scanner join Gitleaks and Syft. Downloads are pinned by checksum and verified with positive/negative fixtures.
-- **More security coverage:** 29 security profiles contain 126 checks with versioned references, required evidence and negative controls. Web, API and source review each have 16 checks.
-- **Focused agent context:** security tools load when discovered or relevant to the selected skill/workbench. Shared skill resources are synchronized during builds.
-- **Reliability fixes:** permission migration, request revocation, HTTP cooldown handling and late workspace-tab responses.
+- **Task controls:** ask separately, queue the next request or steer the current run. Stop, failure and restart pause pending work.
+- **Context and evidence:** inspect task instructions, recorded reads, model input estimates, requirements, executed checks and blockers.
+- **Code review:** line-level findings, reviewed files and revision-aware stale review detection.
+- **GitHub dashboard:** browse and clone repositories; inspect branches, issues, pull requests and CI through your installed GitHub CLI account.
+- **Agent worktrees:** coordinate readers and isolated writers, preview integration and detect conflicting or stale snapshots.
+- **Visual feedback:** annotate an image location and compare a local before-image.
+- **Provider scorecards:** endpoint/model-specific generation, tool, structured-output, vision and six-turn memory probes.
 
-**Release verification:** 640 automated tests passed, plus packaged desktop workbench, scanner and skill checks, all 14 synthetic lab scenarios, and portable launch/icon checks. Desktop model responses used controlled fixtures; scanners and local HTTP requests ran for real. Installer payloads were extracted and matched to the tested package; a clean Windows VM installation was not tested.
+**Release verification:** 647 automated tests and four packaged desktop suites passed; 371 packaged first-party files matched the build. Installer payload and release assets passed integrity, private-path, credential-pattern and dependency-notice checks. Desktop model/GitHub responses used controlled fixtures. Paid live-provider probes, live GitHub account actions and clean Windows VM installation were not tested.
+
+GitHub features require Git, GitHub CLI and repository access. Writer worktrees require Git and post-integration checks. Side chat reads a bounded snapshot; queued requests currently accept text. Model probes do not guarantee long-task quality.
 
 ## Features
 
@@ -122,3 +126,4 @@ To [report a problem](https://github.com/BhojpuriyaDon/CRIMINAL/issues), include
 CRIMINAL is **proprietary freeware**: free to use for personal, educational and commercial work under the [CRIMINAL Freeware License](LICENSE.txt). Its original application source is not offered under an open-source license.
 
 You may share complete, unmodified official packages without charging for the application, while retaining their licenses and notices. Third-party components keep their own licenses and rights, including any applicable covered-source availability requirements.
+

@@ -1,5 +1,35 @@
 # Release notes
 
+## 0.21.0 — Desktop workflow upgrade
+
+This release expands the Windows desktop workflow with task controls, code review, GitHub access and clearer verification evidence.
+
+### Improvements
+
+- Ask separately in a side conversation without changing the active task.
+- Queue the next request or steer the current run, with persistent controls and paused recovery after Stop, failure or restart.
+- Inspect task context, instruction sources, recorded file reads and estimated model input.
+- Add line-level diff findings, resolve reviews and detect stale reviews after code changes.
+- Connect through the installed GitHub CLI to browse repositories, clone projects, inspect branches, issues, pull requests and CI.
+- Manage reader agents and isolated writer worktrees, preview integration and reject stale or conflicting snapshots.
+- Mark image feedback and compare a local before-image.
+- Test the configured endpoint/model with generation, tool, structured-output, vision and six-turn memory probes.
+- Review delivery requirements, tests, visual evidence and outstanding blockers in one panel.
+
+### Verification
+
+647 automated tests and four packaged desktop suites passed. All 371 packaged first-party files matched the checked build. Installer executable, app archive and legal files match the tested package; private-path, credential-pattern and dependency-notice checks passed.
+
+Desktop model and GitHub responses used controlled fixtures. Paid live-provider probes, live GitHub account actions and a clean Windows VM installation were not tested. Model probes are bounded checks, not a guarantee of long-task quality.
+
+### Downloads and requirements
+
+Use the installer or portable EXE. Close older CRIMINAL instances before upgrading. SHA256SUMS.txt covers the four accompanying files; the legal ZIP contains third-party notices and applicable covered sources. Windows x64 packages remain unsigned.
+
+The GitHub dashboard needs Git, GitHub CLI and an account with repository access. Writer worktrees require Git. Side chat uses a task snapshot; queued requests currently accept text. Integration still requires relevant post-merge checks.
+
+CRIMINAL is free for personal and commercial use under its Freeware License. Provider/API/cloud charges are separate. This repository contains public documentation and binary downloads; the application source and cloud-worker source kit are not published here.
+
 ## 0.14.7 — Browser verification, recovery and clearer summaries
 
 - Added a GitHub project link in Settings for releases, feedback and updates.
@@ -60,4 +90,5 @@ This release retains the 0.14.2 completion reports, per-request changed-file sum
 
 
 The Windows packages are unsigned. AI providers, web services and cloud compute may charge separately. No provider credits are included.
+
 
