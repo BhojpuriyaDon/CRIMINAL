@@ -2,7 +2,7 @@
 
 **A free AI workspace for Windows. Bring your models and work in your own project folders.**
 
-Published by **BhojpuriyaDon** · Windows x64 · Installer and portable editions
+Published by **BhojpuriyaDon** · **v0.19.0** · Windows x64 · Installer and portable editions
 
 [Releases](https://github.com/BhojpuriyaDon/CRIMINAL/releases) · [Report an issue](https://github.com/BhojpuriyaDon/CRIMINAL/issues) · [License](LICENSE.txt)
 
@@ -27,14 +27,18 @@ This repository hosts downloads, documentation and issue reports. CRIMINAL's app
 
 ## Download
 
-Open [Releases](https://github.com/BhojpuriyaDon/CRIMINAL/releases) and choose a published Windows asset:
+**Latest release: [CRIMINAL 0.19.0](https://github.com/BhojpuriyaDon/CRIMINAL/releases/tag/v0.19.0)**
+
+Choose an edition:
 
 | Edition | What to download |
 | --- | --- |
-| Installer | `CRIMINAL-Setup-<version>.exe` — installs the app and creates shortcuts. |
-| Portable | `CRIMINAL-<version>-portable.exe` — opens without installation. |
+| Installer | [Download Windows installer](https://github.com/BhojpuriyaDon/CRIMINAL/releases/download/v0.19.0/CRIMINAL-Setup-0.19.0.exe) — installs the app and creates shortcuts. |
+| Portable | [Download portable app](https://github.com/BhojpuriyaDon/CRIMINAL/releases/download/v0.19.0/CRIMINAL-0.19.0-portable.exe) — opens without installation. |
+| Checksums | [SHA256SUMS.txt](https://github.com/BhojpuriyaDon/CRIMINAL/releases/download/v0.19.0/SHA256SUMS.txt) |
+| Third-party licenses | [Legal and covered-source bundle](https://github.com/BhojpuriyaDon/CRIMINAL/releases/download/v0.19.0/CRIMINAL-0.19.0-third-party-legal.zip) |
 
-**If no release is listed, the public download is not available yet.** GitHub's automatically generated "Source code" ZIP/TAR downloads contain this documentation repository, not the application.
+GitHub's automatically generated "Source code" ZIP/TAR downloads contain this documentation repository, not the application.
 
 Close older CRIMINAL instances before upgrading. The current build is unsigned, so Windows may show an unrecognized-publisher warning. Obtain downloads from this repository and compare them with the checksums supplied for the release.
 
@@ -59,6 +63,16 @@ Add create, edit and delete actions, test them, and summarize the changes.
 
 English, Hindi and Hinglish prompts are supported. Results depend on the selected model and its capabilities.
 
+## What's new in 0.19.0
+
+- **Approved authenticated requests:** save exact GET/POST templates for test accounts in the credential vault; replay them within an expiring scope policy and request budget.
+- **Source and dependency review:** managed Opengrep and OSV-Scanner join Gitleaks and Syft. Downloads are pinned by checksum and verified with positive/negative fixtures.
+- **More security coverage:** 29 security profiles contain 126 checks with versioned references, required evidence and negative controls. Web, API and source review each have 16 checks.
+- **Focused agent context:** security tools load when discovered or relevant to the selected skill/workbench. Shared skill resources are synchronized during builds.
+- **Reliability fixes:** permission migration, request revocation, HTTP cooldown handling and late workspace-tab responses.
+
+**Release verification:** 640 automated tests passed, plus packaged desktop workbench, scanner and skill checks, all 14 synthetic lab scenarios, and portable launch/icon checks. Desktop model responses used controlled fixtures; scanners and local HTTP requests ran for real. Installer payloads were extracted and matched to the tested package; a clean Windows VM installation was not tested.
+
 ## Features
 
 - Project folders, multiple chats per project and saved task history.
@@ -66,11 +80,22 @@ English, Hindi and Hinglish prompts are supported. Results depend on the selecte
 - Markdown responses, collapsible activity, edited-file reports and supported text-change Undo.
 - Integrated editor, terminals, browser tools and supported file previews.
 - OpenRouter, Ollama, Docker Model Runner and custom API profiles.
-- Bundled skills, custom skills, plugins and compatible MCP integrations.
+- 63 bundled skills, editable/custom skills, specialist selection, plugins and compatible MCP integrations.
+- Cybersecurity assessment workbench, evidence records, request inventory and report exports.
 - Web research and tools for supported Word, Excel, PowerPoint and PDF work.
 - Light and dark themes, adjustable chat font size and model-dependent reasoning effort.
 
 Some features require additional software, accounts, API keys or a model with the necessary capabilities. Cloud features require a separately configured compatible worker; this repository does not publish a worker source kit.
+
+## Security workbench
+
+Open **Workspace tools → Cybersecurity** in a local project chat. Use the assessment workbench to define scope, import HAR/OpenAPI JSON, inspect requests, collect observations and export coverage. Creating an authorized-testing assessment enables the restricted agent profile; on upgrade, existing local authorized-testing chats migrate once. Later explicit user choices persist.
+
+In restricted mode, the agent can read/search project files and use bounded assessment tools. Approve the scope policy and each exact authenticated request in **Scope**. Credentials and request bodies stay in the vault; the model receives template metadata, response status/header-presence flags and bounded response hashes. Redirects are refused, and request budgets, expiry and cooldowns apply.
+
+**Managed adapters** scan selected file copies outside the restricted profile. Opengrep uses bundled JavaScript/TypeScript/Python rules. OSV-Scanner requires per-chat consent to send package names and versions to OSV. The adapters are downloaded separately and run with the host account's permissions; they are not an OS sandbox.
+
+Supported boundaries: managed adapters require Windows x64. Scoped HTTP supports public IPv4 and explicit loopback fixtures; private networks and IPv6 are unsupported. Scanner matches require review. Synthetic lab results do not verify your project's security, and framework references are not compliance certification.
 
 ## Models and requirements
 
