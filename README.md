@@ -2,7 +2,7 @@
 
 **A free AI workspace for Windows. Bring your models and work in your own project folders.**
 
-Published by **BhojpuriyaDon** · **v0.21.0** · Windows x64 · Installer and portable editions
+Published by **BhojpuriyaDon** · **v0.22.0** · Windows x64 · Installer and portable editions
 
 [Releases](https://github.com/BhojpuriyaDon/CRIMINAL/releases) · [Report an issue](https://github.com/BhojpuriyaDon/CRIMINAL/issues) · [License](LICENSE.txt)
 
@@ -27,16 +27,16 @@ This repository hosts downloads, documentation and issue reports. CRIMINAL's app
 
 ## Download
 
-**Latest release: [CRIMINAL 0.21.0](https://github.com/BhojpuriyaDon/CRIMINAL/releases/tag/v0.21.0)**
+**Latest release: [CRIMINAL 0.22.0](https://github.com/BhojpuriyaDon/CRIMINAL/releases/tag/v0.22.0)**
 
 Choose an edition:
 
 | Edition | What to download |
 | --- | --- |
-| Installer | [Download Windows installer](https://github.com/BhojpuriyaDon/CRIMINAL/releases/download/v0.21.0/CRIMINAL-Setup-0.21.0.exe) — installs the app and creates shortcuts. |
-| Portable | [Download portable app](https://github.com/BhojpuriyaDon/CRIMINAL/releases/download/v0.21.0/CRIMINAL-0.21.0-portable.exe) — opens without installation. |
-| Checksums | [SHA256SUMS.txt](https://github.com/BhojpuriyaDon/CRIMINAL/releases/download/v0.21.0/SHA256SUMS.txt) |
-| Third-party licenses | [Legal and covered-source bundle](https://github.com/BhojpuriyaDon/CRIMINAL/releases/download/v0.21.0/CRIMINAL-0.21.0-third-party-legal.zip) |
+| Installer | [Download Windows installer](https://github.com/BhojpuriyaDon/CRIMINAL/releases/download/v0.22.0/CRIMINAL-Setup-0.22.0.exe) — installs the app and creates shortcuts. |
+| Portable | [Download portable app](https://github.com/BhojpuriyaDon/CRIMINAL/releases/download/v0.22.0/CRIMINAL-0.22.0-portable.exe) — opens without installation. |
+| Checksums | [SHA256SUMS.txt](https://github.com/BhojpuriyaDon/CRIMINAL/releases/download/v0.22.0/SHA256SUMS.txt) |
+| Third-party licenses | [Legal and covered-source bundle](https://github.com/BhojpuriyaDon/CRIMINAL/releases/download/v0.22.0/CRIMINAL-0.22.0-third-party-legal.zip) |
 
 GitHub's automatically generated "Source code" ZIP/TAR downloads contain this documentation repository, not the application.
 
@@ -63,67 +63,17 @@ Add create, edit and delete actions, test them, and summarize the changes.
 
 English, Hindi and Hinglish prompts are supported. Results depend on the selected model and its capabilities.
 
+## What's new in 0.22.0
+
+- **Direct provider presets:** 34 endpoint presets cover hosted APIs, regional/deployment endpoints and local servers; OpenRouter remains optional.
+- **Connection setup:** presets fill the endpoint, protocol, authentication guidance and setup links. Saved profiles remain separate; unsaved key/model drafts clear on preset changes.
+- **Model discovery:** manual model/deployment IDs are supported where provider catalogs differ, including Azure. Custom provider profiles remain available.
+- **Compatibility:** direct profiles support OpenAI Chat Completions, OpenAI Responses, Anthropic Messages and Gemini. Other signing/OAuth APIs need a compatible gateway.
+
+**Release verification:** 685 automated tests passed, including 38 provider tests. The packaged provider desktop suite and portable executable checks passed. Tests used fixtures; paid live-provider calls and a clean Windows VM installation were not tested. Windows packages are unsigned.
+
+[Direct AI provider setup](docs/AI_PROVIDERS.md) explains how to connect supported hosted, regional and local APIs.
+
 ## What's new in 0.21.0
 
 - **Task controls:** ask separately, queue the next request or steer the current run. Stop, failure and restart pause pending work.
-- **Context and evidence:** inspect task instructions, recorded reads, model input estimates, requirements, executed checks and blockers.
-- **Code review:** line-level findings, reviewed files and revision-aware stale review detection.
-- **GitHub dashboard:** browse and clone repositories; inspect branches, issues, pull requests and CI through your installed GitHub CLI account.
-- **Agent worktrees:** coordinate readers and isolated writers, preview integration and detect conflicting or stale snapshots.
-- **Visual feedback:** annotate an image location and compare a local before-image.
-- **Provider scorecards:** endpoint/model-specific generation, tool, structured-output, vision and six-turn memory probes.
-
-**Release verification:** 647 automated tests and four packaged desktop suites passed; 371 packaged first-party files matched the build. Installer payload and release assets passed integrity, private-path, credential-pattern and dependency-notice checks. Desktop model/GitHub responses used controlled fixtures. Paid live-provider probes, live GitHub account actions and clean Windows VM installation were not tested.
-
-GitHub features require Git, GitHub CLI and repository access. Writer worktrees require Git and post-integration checks. Side chat reads a bounded snapshot; queued requests currently accept text. Model probes do not guarantee long-task quality.
-
-## Features
-
-- Project folders, multiple chats per project and saved task history.
-- Agent tools for reading, writing and editing files, running commands and checking results.
-- Markdown responses, collapsible activity, edited-file reports and supported text-change Undo.
-- Integrated editor, terminals, browser tools and supported file previews.
-- OpenRouter, Ollama, Docker Model Runner and custom API profiles.
-- 63 bundled skills, editable/custom skills, specialist selection, plugins and compatible MCP integrations.
-- Cybersecurity assessment workbench, evidence records, request inventory and report exports.
-- Web research and tools for supported Word, Excel, PowerPoint and PDF work.
-- Light and dark themes, adjustable chat font size and model-dependent reasoning effort.
-
-Some features require additional software, accounts, API keys or a model with the necessary capabilities. Cloud features require a separately configured compatible worker; this repository does not publish a worker source kit.
-
-## Security workbench
-
-Open **Workspace tools → Cybersecurity** in a local project chat. Use the assessment workbench to define scope, import HAR/OpenAPI JSON, inspect requests, collect observations and export coverage. Creating an authorized-testing assessment enables the restricted agent profile; on upgrade, existing local authorized-testing chats migrate once. Later explicit user choices persist.
-
-In restricted mode, the agent can read/search project files and use bounded assessment tools. Approve the scope policy and each exact authenticated request in **Scope**. Credentials and request bodies stay in the vault; the model receives template metadata, response status/header-presence flags and bounded response hashes. Redirects are refused, and request budgets, expiry and cooldowns apply.
-
-**Managed adapters** scan selected file copies outside the restricted profile. Opengrep uses bundled JavaScript/TypeScript/Python rules. OSV-Scanner requires per-chat consent to send package names and versions to OSV. The adapters are downloaded separately and run with the host account's permissions; they are not an OS sandbox.
-
-Supported boundaries: managed adapters require Windows x64. Scoped HTTP supports public IPv4 and explicit loopback fixtures; private networks and IPv6 are unsupported. Scanner matches require review. Synthetic lab results do not verify your project's security, and framework references are not compliance certification.
-
-## Models and requirements
-
-For OpenRouter, enter your own API key and select a model. For Ollama or another local server, install a model and configure the endpoint that server exposes. Custom profiles support OpenAI Chat Completions, OpenAI Responses, Anthropic Messages and Gemini protocols; the configured protocol must match the server.
-
-The desktop package includes its Electron/Node runtime. Projects created by the agent may still need Node.js, Python, Git or other development tools installed on your PC. PowerShell 7 is recommended for shell work. Local model hardware requirements depend on the model you choose. Windows 11 is the tested release environment.
-
-## Access and privacy
-
-**Full Access is enabled by default.** Supported tools can change files and run host actions without individual approval prompts, using your Windows account's permissions. Choose an appropriate access mode before starting work. This is not a system sandbox and does not bypass Windows UAC.
-
-Project files stay in your chosen folder. The agent sends relevant prompts, file contents, tool results and images to the provider and integrations you configure. Cloud work sends context to the configured worker. Review those services' terms before supplying confidential material.
-
-## Limitations and support
-
-AI models can make mistakes, return malformed actions or fail verification. Review important results and keep backups. Text Undo applies only to supported recorded changes and does not replace backups for binary files or unrelated system actions.
-
-Provider quotas, context limits, command bounds and optional spending limits still apply. Free app access does not mean unlimited paid inference or cloud resources.
-
-To [report a problem](https://github.com/BhojpuriyaDon/CRIMINAL/issues), include the app version, Windows version, provider/model, reproduction steps and the relevant error. Remove API keys, private files and personal information from screenshots and logs.
-
-## License
-
-CRIMINAL is **proprietary freeware**: free to use for personal, educational and commercial work under the [CRIMINAL Freeware License](LICENSE.txt). Its original application source is not offered under an open-source license.
-
-You may share complete, unmodified official packages without charging for the application, while retaining their licenses and notices. Third-party components keep their own licenses and rights, including any applicable covered-source availability requirements.
-
